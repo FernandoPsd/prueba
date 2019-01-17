@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <title>PricoloSA Argentina-Distribuidora de diarios y revistas</title>
+  <meta name="viewport" content="width=device-width">
+  <meta charset="utf8"/>
+  <link rel="stylesheet" type="text/css" href="estilos.css"/>
+      <link rel="stylesheet" href="css/responsive-nav.css">
+       <script src="js/responsive-nav.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+<body>
+	
+<section id="contenedor">
+   <header id="cabecera_index">
+    
+	<div id="nombre"><a href="index.html"><img src="imagenes/banner.jpg" height="50px"></a></div>
+	
+	
+    <div id="home_boton"><img src="imagenes/logodr.gif" height="70px" /> 
+	</div>
+	<div id="botonera">
+         
+		 <nav id="nav">  
+	         <ul> 
+            <li><a href="novedades.html">Novedades</a></li>
+			<li><a href="servicioed.html">Servicio al editor</a></li>
+			<li><a href="servicioes.html">Servicio al lector</a></li>
+			<li><a href="historial.html">Historial de titulos</a></li>
+			<li><a href="contacto.html">Contacto</a> 
+		
+						          				
+               </ul>
+			
+			 	  </nav> <nav id="menu">Menú</nav>
+				  
+										  
+				  
+	</div>
+      </header>
+	  <section id="contenido_index">
+	  
+	    <div id="rect6"><h3><p>Empresa dedicada por cuatro generaciones a la representación de editoriales, distribuyendo sus publicaciones: diarios, revistas y afines en
+Capital Federal y Gran Buenos Aires
+República Argentina.</p><h3>
+ <h6><p>LA LECTURA ENRIQUECE TUS CONOCIMIENTOS.</h6></p>
+</div>
+	
+	
+	<div id="rect7">
+	<img class="mySlides" src="images/slider/imagenindex1.jpg" alt="">
+    <img class="mySlides" src="images/slider/imagenindex2.jpg" alt="">
+  
+  <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="right" onclick="plusDivs(1)">&#10095;</button>
+
+	</div>
+      
+	 <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+}
+	
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 3000); // Cambia la imagen cada 2 segundos
+}
+</script> 
+
+<script>
+      var navigation = responsiveNav("#nav", {
+        animate: true,        // Boolean: Use CSS3 transitions, true or false
+        transition: 400,      // Integer: Speed of the transition, in milliseconds
+        label: "Menu",        // String: Label for the navigation toggle
+        insert: "after",      // String: Insert the toggle before or after the navigation
+        customToggle: "",     // Selector: Specify the ID of a custom toggle
+        openPos: "relative",  // String: Position of the opened nav, relative or static
+        jsClass: "js",        // String: 'JS enabled' class which is added to <html> el
+        init: function(){},   // Function: Init callback
+        open: function(){},   // Function: Open callback
+        close: function(){}   // Function: Close callback
+      });
+    </script>
+     
+	
+	</div>
+	  
+	  
+      </section>
+     <footer id= "pie_index"> <h5>@Pricolo SA. Dirección: Av. Vélez Sarsfield 1857, C1285AAH CABA
+ Horario de apertura: 10:30hs de Lunes a Viernes. Teléfonos: 011 4301-0076 - 011 4302-0022<span class="textocontacto"><a href="contacto.html">/ Contacto</a><span></h5>
+       </footer>
+<section>
+</body>
+
+</html>
